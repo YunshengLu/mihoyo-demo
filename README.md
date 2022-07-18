@@ -1,14 +1,14 @@
-api(无需认证):  
- 分区列表：  
+## api(无需认证):  
+### 分区列表：  
  - https://bbs-api.mihoyo.com/apihub/api/getGameList  
  - 请求方法:GET
 
-    分区信息：
+### 分区信息：
     - https://bbs-api.mihoyo.com/apihub/api/home/new?gids=2
     - 请求方法:GET
     - gids：游戏分区id 从分区列表获取
 
-    推荐文章：
+### 推荐文章：
     - https://bbs-api-static.mihoyo.com/apihub/wapi/webHome?gids=2&page=1&page_size=20
     - https://bbs-api.mihoyo.com/post/api/feeds/posts?fresh_action=1&gids=2&last_id=
     - 请求方法:GET
@@ -19,7 +19,7 @@ api(无需认证):
         - fresh_action: 暂时未知，改变后推荐文章从第三个开始了？？？？
         - last_id: 未知          
     
-    文章互动数据：            
+### 文章互动数据：            
     - https://bbs-api.mihoyo.com/post/wapi/getDynamicData?gids=2&post_ids=${post_ids[].toString()}               
     - 请求方法:GET
     - 参数：            
@@ -27,7 +27,7 @@ api(无需认证):
         - post_ids： 由推荐文章post中的post_id 获取，为一串字符串            
             - 例如： https://bbs-api.mihoyo.com/post/wapi/getDynamicData?gids=2&post_ids=25828757,25660962,25638945,25701672,25648896,25475938,25475944,25592954,25592186,25811911,25826305,25727088,25829927,25719649,25707382,25753109,25775332,25715295,25815479,25804354
 
-    搜索结果(模糊查询)：
+### 搜索结果(模糊查询)：
     - https://bbs-api.mihoyo.com/apihub/wapi/search?keyword=${keyword}
     - 请求方法:GET
     - 参数：
@@ -146,7 +146,7 @@ api(无需认证):
 
 - help_sys：？？？
     - top_up：？？？
-    
+
 - vote_count：票数，？？？ 暂时获取的都为0
 - last_modify_time：应该是最后一次更新时间，但是不知为啥这里恒为0
 - recommend_type：推荐类型，也不知道为啥恒为空
