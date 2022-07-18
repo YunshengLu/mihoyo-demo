@@ -4,34 +4,34 @@
  - 请求方法:GET
 
 ### 分区信息：
-    - https://bbs-api.mihoyo.com/apihub/api/home/new?gids=2
-    - 请求方法:GET
-    - gids：游戏分区id 从分区列表获取
+ - https://bbs-api.mihoyo.com/apihub/api/home/new?gids=2
+ - 请求方法:GET
+ - gids：游戏分区id 从分区列表获取
 
 ### 推荐文章：
-    - https://bbs-api-static.mihoyo.com/apihub/wapi/webHome?gids=2&page=1&page_size=20
-    - https://bbs-api.mihoyo.com/post/api/feeds/posts?fresh_action=1&gids=2&last_id=
-    - 请求方法:GET
-    - 参数：
-        - gids：游戏分区id 从分区列表获取
-        - page: 推荐文章页
-        - page_size: 一页的文章数
-        - fresh_action: 暂时未知，改变后推荐文章从第三个开始了？？？？
-        - last_id: 未知          
+ - https://bbs-api-static.mihoyo.com/apihub/wapi/webHome?gids=2&page=1&page_size=20
+ - https://bbs-api.mihoyo.com/post/api/feeds/posts?fresh_action=1&gids=2&last_id=
+ - 请求方法:GET
+ - 参数：
+     - gids：游戏分区id 从分区列表获取
+     - page: 推荐文章页
+     - page_size: 一页的文章数
+     - fresh_action: 暂时未知，改变后推荐文章从第三个开始了？？？？
+     - last_id: 未知          
     
 ### 文章互动数据：            
-    - https://bbs-api.mihoyo.com/post/wapi/getDynamicData?gids=2&post_ids=${post_ids[].toString()}               
-    - 请求方法:GET
-    - 参数：            
-        - gids：游戏分区id 从分区列表获取          
-        - post_ids： 由推荐文章post中的post_id 获取，为一串字符串            
-            - 例如： https://bbs-api.mihoyo.com/post/wapi/getDynamicData?gids=2&post_ids=25828757,25660962,25638945,25701672,25648896,25475938,25475944,25592954,25592186,25811911,25826305,25727088,25829927,25719649,25707382,25753109,25775332,25715295,25815479,25804354
+ - https://bbs-api.mihoyo.com/post/wapi/getDynamicData?gids=2&post_ids=${post_ids[].toString()}               
+ - 请求方法:GET
+ - 参数：            
+     - gids：游戏分区id 从分区列表获取          
+     - post_ids： 由推荐文章post中的post_id 获取，为一串字符串            
+         - 例如： https://bbs-api.mihoyo.com/post/wapi/getDynamicData?gids=2&post_ids=25828757,25660962,25638945,25701672,25648896,25475938,25475944,25592954,25592186,25811911,25826305,25727088,25829927,25719649,25707382,25753109,25775332,25715295,25815479,25804354
 
 ### 搜索结果(模糊查询)：
-    - https://bbs-api.mihoyo.com/apihub/wapi/search?keyword=${keyword}
-    - 请求方法:GET
-    - 参数：
-        - keyword: 输入框输入的关键词
+ - https://bbs-api.mihoyo.com/apihub/wapi/search?keyword=${keyword}
+ - 请求方法:GET
+ - 参数：
+     - keyword: 输入框输入的关键词
 
 ## https://bbs-api.mihoyo.com/apihub/api/home/new?gids=2 数据分析：
 
