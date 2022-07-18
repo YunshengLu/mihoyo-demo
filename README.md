@@ -1,3 +1,4 @@
+# **本页面数据仅为学习所用**
 ## api(无需认证):  
 ### 分区列表：  
  - https://bbs-api.mihoyo.com/apihub/api/getGameList  
