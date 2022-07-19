@@ -1,0 +1,2 @@
+export const SET_GAME_LIST = 'SET_GAME_LIST'
+export const CHOOSE_GAME_LIST = 'CHOOSE_GAME_LIST'

@@ -1,0 +1,2 @@
+export const SET_GAME_LIST = 'SET_GAME_LIST'
+export const GET_BACKGROUND_LIST = 'GET_BACKGROUND_LIST'
