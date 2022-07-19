@@ -78,7 +78,7 @@
 - subject：标题
 - content：简介
 - cover：题头图链接
-- view_type：恒为 1？？？
+- view_type：题头图显示类型，沾满宽为1，方正为2
 - created_at：创建时间，UNIX 时间戳格式
 - images：图片链接
 
