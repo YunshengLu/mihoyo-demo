@@ -54,7 +54,7 @@ const HomeDetailNav = (props) => {
                 setSearchHidden(true);
                 searchRef.current.style.position = 'fixed'
                 searchRef.current.style.backgroundColor ='white'
-                searchRef.current.style.zIndex = '9999'
+                searchRef.current.style.zIndex = '99'
                 searchRef.current.style.opacity = '0.5'
             }
         }else {

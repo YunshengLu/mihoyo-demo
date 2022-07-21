@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import style from '@/assets/global-style';
 
 export const Wrapper = styled.div`
     display: flex;
@@ -27,7 +28,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ItemConent = styled.div`
-    border-bottom: 0.4rem solid rgb(242, 243, 244);
+    border-bottom: 0.4rem solid ${style['theme-color']};
     background: white;
     .content {
         display: flex;
@@ -58,6 +59,7 @@ export const ItemConent = styled.div`
         }
     }
     .cover_container {
+        position: relative;
         overflow: hidden;
         width: 96%;
         margin-top: 0.5rem;
@@ -65,6 +67,17 @@ export const ItemConent = styled.div`
         margin-left: 0.5rem;
         border-radius: 0.2rem;
         white-space: nowrap;
+        .label {
+            position: absolute;
+            right: 0.2rem;
+            font-size: 0.6rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 2.2rem;
+            line-height: 0.8rem;
+            border-radius: 0.1rem;
+            bottom: 0.2rem;
+        }
     }
 `;
 
@@ -169,7 +182,7 @@ export const Item = styled.div`
 
 export const SwiperItem = styled.div`
     height: 8rem;
-    background: rgb(242, 243, 244);
+    background: ${style['theme-color']};
     img {
         width: 100%;
         height: 100%;

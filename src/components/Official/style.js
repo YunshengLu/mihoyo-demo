@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import style from '@/assets/global-style';
 
 export const Wrapper = styled.div`
     position: relative;
@@ -8,7 +9,7 @@ export const Wrapper = styled.div`
     background: white;
     border-radius: 0.4rem 0.4rem 0 0;
     height: 10.4rem;
-    border-bottom: 0.4rem solid rgb(242, 243, 244);
+    border-bottom: 0.4rem solid ${style['theme-color']};
     a {
         display: inline-block;
         display: flex;

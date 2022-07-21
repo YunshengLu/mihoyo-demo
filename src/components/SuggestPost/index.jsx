@@ -20,6 +20,7 @@ import {
     BankcardOutline, 
     FileWrongOutline,
 } from 'antd-mobile-icons'
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const SuggestPost = ({suggestPostList, carouselsList}) => {
 
@@ -168,14 +169,15 @@ const SuggestPostContent = ({Post}) => {
         )
     }
 
-    const coverImg = () => {
-        let coverImgs = Post.post.images
-        let Img = []
-        for(let i = 0;i < 3; i++) {
-            Img.push(coverImgs[i])
-        }
-        return Img
-    }
+    // const coverImg = () => {
+    //     let coverImgs = Post.post.images
+    //     let len = coverImgs.length
+    //     let Img = []
+    //     for(let i = 0;i < 3; i++) {
+    //         Img.push(coverImgs[i])
+    //     }
+    //     return Img
+    // }
     
     return (
         <ItemConent>
@@ -214,21 +216,34 @@ const SuggestPostContent = ({Post}) => {
                 }
             </div>
 
+            <PhotoProvider>
             <div className="cover_container">
                 {
-                    Post.post.cover && <CoverImg 
+                    Post.post.cover && 
+                    <PhotoView src={Post.post.cover}>
+                    <CoverImg 
                         coverUrl={Post.post.cover}
                         viewType={Post.post.view_type}
                         />
+                    </PhotoView>
                 }
                 {
-                coverImg() && !Post.post.cover &&
-                    coverImg().map((item, index) =>
-                        <ImageItem imgUrl={item} key={index}/>
-                        // <img src={item} key={index} />
-                        )
+                Post.post.images && !Post.post.cover &&
+                Post.post.images.map((item, index) =>(
+                        <PhotoView key={index} src={item}>
+                        <ImageItem imgUrl={item} />
+                        </PhotoView>
+                        ))
+                }
+                {
+                    Post.post.images && !Post.post.cover &&
+                    <div className="label">
+                        <i className='iconfont icon-gengduotupian'></i>
+                        +{Post.post.images.length}
+                    </div>
                 }
             </div>
+            </PhotoProvider>
                             
             <div className="footer"></div>
         </ItemConent>

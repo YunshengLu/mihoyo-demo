@@ -28,7 +28,7 @@ const Discuss = ({discussion}) => {
                     searchRef.current.style.position = 'fixed'
                     searchRef.current.style.backgroundColor ='white'
                     searchRef.current.style.marginTop = '-2.98rem'
-                    searchRef.current.style.zIndex = '9999'
+                    searchRef.current.style.zIndex = '99'
                 }
             }else {
                 if(searchHidden && searchRef.current){

@@ -21,7 +21,7 @@ export const getResultList = (query) => {
                     dispatch(changeResult(''))
                 }                 
                 let res = data.data.topics || []
-                console.log(res);
+                // console.log(res);
                 dispatch(changeResult(res))
             })
     }

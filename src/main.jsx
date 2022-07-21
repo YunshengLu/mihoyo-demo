@@ -8,6 +8,7 @@ import store from './store'
 import 'swiper/css/swiper.css'
 // import 'swiper/css'
 import '@/assets/iconfont/iconfont.css'
+import 'react-photo-view/dist/react-photo-view.css';
 // import '@/modules/rem'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
