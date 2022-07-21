@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const DiscussWrapper = styled.div`
-    /* background: pink; */
     width: 100%;
     height: ${props => (props.searchHidden ? '2rem' : '4rem')};
     display: flex;

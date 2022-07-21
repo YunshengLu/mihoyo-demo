@@ -8,8 +8,8 @@ import {
 
 export default function ContentList(props) {
 
-    const { checked, id, title, img, deleteList, item } = props;
-
+    const { has_wiki, id, name, app_icon, deleteList, item } = props;
+    
     const {
         setNodeRef,
         attributes,
@@ -30,7 +30,6 @@ export default function ContentList(props) {
     return (
         <>
         {
-            checked == true &&
             <Tab
                 ref={setNodeRef}
                 {...attributes}
@@ -38,10 +37,10 @@ export default function ContentList(props) {
                 style={style}
             >
                     <TabItem>
-                        <img src={img} alt="" />
-                        <span>{title}</span>
+                        <img src={app_icon} alt="" />
+                        <span>{name}</span>
                         {
-                            title !== '大别野' && 
+                            name !== '大别野' && 
                             <i className="iconfont icon-shanjian" onClick={() => deleteList(item)} ></i>
                         }
                         <i className="iconfont icon-shouye" ></i>

@@ -8,7 +8,7 @@ export const TabWrapper = styled.div`
 
     header {
         width: 100%;
-        height: 0.5rem;
+        height: 2.8rem;
         display: flex;
         align-items: center;
 
@@ -17,7 +17,7 @@ export const TabWrapper = styled.div`
             text-align: left;
             flex: 1;
             p {
-                margin-left: 0.1rem;
+                margin-left: 0.5rem;
                 font-weight: 600;
             }
         }
@@ -26,7 +26,7 @@ export const TabWrapper = styled.div`
             width: 50%;
             text-align: right;
             p {
-                margin-right: 0.1rem;
+                margin-right: 0.5rem;
                 font-size: 16px;
                 opacity: 0.6;
             }

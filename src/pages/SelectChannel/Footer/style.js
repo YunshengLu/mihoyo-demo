@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const FooterWrapper = styled.div``;
 
 export const TabWrapper = styled.div`
-    height: 0.6rem;
-    line-height: 0.6rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
     left: 0;
     top: 0;
     right: 0;
@@ -13,7 +13,7 @@ export const TabWrapper = styled.div`
     text-align: left;
 
     .left {
-        margin-left: 0.1rem;
+        margin-left: 0.5rem;
         p {
             font-weight: 600;
         }

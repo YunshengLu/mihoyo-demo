@@ -63,7 +63,6 @@ export const SelectItem = styled.div`
                 font-weight: 500;
                 font-size: 1rem;
                 color: ${props => (props.searchHidden ? 'black' : 'white')};
-                /* color: white; */
             }
         }
         span {

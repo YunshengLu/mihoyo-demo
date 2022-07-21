@@ -8,7 +8,7 @@ import { restrictToVerticalAxis, restrictToWindowEdges } from '@dnd-kit/modifier
 export default function Content(props) {
 
     const { data, deleteList, handleDragEnd } = props
-
+    
     // 捕获触摸传感器
     const touchSensor = useSensor(TouchSensor,{
         activationConstraint:{

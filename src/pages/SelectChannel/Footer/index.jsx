@@ -4,12 +4,12 @@ import { FooterWrapper, TabWrapper } from './style'
 
 export default function Footer(props) {
 
-    const { data, choose, FalseCheck } = props
+    const { data, choose } = props
 
     return (
         <FooterWrapper>
             {
-            FalseCheck.length > 0 &&
+            data.length > 0 &&
             <TabWrapper>
                 <header>
                     <div className='left'>

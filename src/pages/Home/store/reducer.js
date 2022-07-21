@@ -7,7 +7,7 @@ const defaultState = {
 }
 
 export default (state = defaultState, action) => {
-    console.log(action,'[][][][]');
+    // console.log(action,'[][][][]');
 
     switch (action.type) {
         case actionTypes.SET_GAME_LIST:

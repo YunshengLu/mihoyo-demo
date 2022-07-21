@@ -16,7 +16,7 @@ export const getPostListRequest =
     (query) => axiosInstance.get(`/apihub/wapi/webHome?gids=${query}`)
 // 推荐文章互动数据
 export const getPostStatRequest =
-    (query,arr) => axiosInstance.get(`/post/wapi/getDynamicData?gids=${query}&post_ids=${arr.toString()}`)
+    (query,arr) => axiosInstance.get(`/post/wapi/getDynamicData?gids=${query}&post_ids=${arr}`)
 
 // 搜索
 export const getResultListRequest =

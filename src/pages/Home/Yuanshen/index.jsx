@@ -24,7 +24,7 @@ import { Wrapper } from './style'
 
 const Yuanshen = (props) => {
 
-    const [postId,setPostId] = useState([])
+    // const [postId,setPostId] = useState([])
 
     const {
         yuanshenActivityList,
@@ -45,13 +45,17 @@ const Yuanshen = (props) => {
     } = props
 
     const getPostID = () => {
-        suggestPostList.forEach(item => {
-            let id = +item.post.post_id
-            setPostId([
-                ...postId,
-                id
-            ])
+        let postId = []
+        suggestPostList.map(item => {
+            // console.log(item);
+            let id = item.post.post_id
+            postId.push(id)
+            // setPostId([
+            //     ...postId,
+            //     id
+            // ])
         })
+        return postId
     }
 
     useEffect(() => {
@@ -61,13 +65,11 @@ const Yuanshen = (props) => {
         getSuggestPostListDispatch(2);
         getCarouselsListDispatch(2);
     },[])
-
+    let postIds = getPostID()
+    // console.log(postIds.join(),'@@@@@@@@@@@@@@@@');
     // useEffect(() => {
-    //     getPostID()
-    //     getPostStatListDispatch(2,postId)
-    // },[])
-
-    // console.log(postId,'@@@@@@@@@@@@@@@@');
+    //     getPostStatListDispatch(2,postIds)
+    // },[postIds])
     
     async function doRefresh() {
         await sleep(1000);

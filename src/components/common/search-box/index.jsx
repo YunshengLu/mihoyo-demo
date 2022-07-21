@@ -13,7 +13,7 @@ const SearchBox = (props) => {
     const [query,setQuery] = useState('');
 
     let handleQueryDebounce = useMemo(() => {
-        return debounce(handleQuery, 500)
+        return debounce(handleQuery, 100)
     },[handleQuery])
 
     useEffect(() => {

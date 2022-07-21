@@ -65,6 +65,8 @@ const getPostStatList = (data) => ({
 })
 export const getPostStat = (query,arr) =>{
     return (dispatch) => {
+        arr = arr.join()
+        console.log(arr,'&&&&&&&&&&&&&&&&&&&&');
         getPostStatRequest(query,arr).then(data => {
             let list = data.data.list
             dispatch(getPostStatList(list))

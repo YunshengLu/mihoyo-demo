@@ -19,7 +19,6 @@ const Discuss = ({discussion}) => {
     const [searchHidden, setSearchHidden] = useState(false);
     const searchRef = useRef(null)
     const scroll = useScroll()
-    // console.log(scroll,'########');
 
         // 监听屏幕滚动，超出顶部，组件吸顶
         useEffect(() => {

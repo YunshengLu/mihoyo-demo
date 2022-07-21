@@ -7,22 +7,16 @@ import { arrayMove } from '@dnd-kit/sortable'
 import {
     getGameList,
 } from './store/actionCreators'
+import { connect } from 'react-redux'
 
 const SelectChannel = (props) => {
     
-    // const [list, setList] = useState([
-    //     {
-    //         id: 7,
-    //         title: '大别野',
-    //         img: 'https://bbs.mihoyo.com/_nuxt/img/game-dby.7b16fa8.jpg',
-    //         checked: true,
-    //     },
-    // ]);
+    // const [list, setList] = useState([]);
     const [loading,setLoading] = useState(false)
     const [change,setChange] = useState(false)
 
     const {
-        gameList : list
+        gameList: list
     } = props
 
     const {
@@ -30,9 +24,8 @@ const SelectChannel = (props) => {
     } = props
 
     // 筛选出已选择和未选择项
-    const TrueCheck = list.filter(item => item.has_wiki == true);
-    const FalseCheck = list.filter(item => item.has_wiki == false);
-
+    const TrueCheck = list.filter(item => item.has_wiki == true || item.en_name == 'dby');
+    const FalseCheck = list.filter(item => item.has_wiki == false && item.en_name !== 'dby');
     // 提示模态框
     const modal=()=>{
         return(
@@ -55,7 +48,7 @@ const SelectChannel = (props) => {
         let idx = list.findIndex(data => item.id === data.id);
         // console.log(idx);
         list[idx].has_wiki = !list[idx].has_wiki;
-        setList([...list]);
+        // setList([...list]);
         setChange(true)
     };
 
@@ -68,7 +61,7 @@ const SelectChannel = (props) => {
             setState();
         }else{
             list[idx].has_wiki = !list[idx].has_wiki;
-            setList([...list]);
+            // setList([...list]);
             setChange(true)
         }
     };
@@ -99,13 +92,12 @@ const SelectChannel = (props) => {
         <>
             {modal()}
             <Header change={change} />
-            <Content data={list} 
+            <Content data={TrueCheck} 
                 deleteList={deleteList} 
                 handleDragEnd={handleDragEnd} 
                 />
-            <Footer data={list} 
+            <Footer data={FalseCheck} 
                 choose={choose} 
-                FalseCheck={FalseCheck} 
                 />
         </>
     );

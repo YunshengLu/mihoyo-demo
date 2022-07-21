@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Tab = styled.div`
-    height: 0.6rem;
-    line-height: 0.6rem;
+    height: 3rem;
+    line-height: 3rem;
     left: 0;
     top: 0;
     right: 0;
