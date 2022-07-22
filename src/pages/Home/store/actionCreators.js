@@ -32,3 +32,8 @@ export const getBackground = (query) => {
         })
     }
 }
+
+export const affirmChangeGame = (data) => ({
+    type: actionTypes.AFFIRM_CHANGE_GAME,
+    data
+})

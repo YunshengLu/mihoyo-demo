@@ -20,6 +20,11 @@ export default (state = defaultState, action) => {
                 ...state,
                 backgroundList: action.data
             }
+        case actionTypes.AFFIRM_CHANGE_GAME:
+            return {
+                ...state,
+                gameList: action.data
+            }
         default:
             return state
     }

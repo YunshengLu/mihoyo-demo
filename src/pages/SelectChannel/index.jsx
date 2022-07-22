@@ -7,20 +7,24 @@ import { arrayMove } from '@dnd-kit/sortable'
 import {
     getGameList,
 } from './store/actionCreators'
+import {
+    affirmChangeGame,
+} from '@/pages/Home/store/actionCreators'
 import { connect } from 'react-redux'
 
 const SelectChannel = (props) => {
     
-    // const [list, setList] = useState([]);
+    const [list, setList] = useState([]);
     const [loading,setLoading] = useState(false)
     const [change,setChange] = useState(false)
 
     const {
-        gameList: list
+        gameList
     } = props
 
     const {
-        getGameListDispatch
+        getGameListDispatch,
+        affirmChangeGameDispatch,
     } = props
 
     // 筛选出已选择和未选择项
@@ -42,13 +46,17 @@ const SelectChannel = (props) => {
         },2000)
     }
 
+    const affirm = () => {
+        affirmChangeGameDispatch(list)
+    }
+
     // 选择
     const choose = item => {
         // console.log('--------');
         let idx = list.findIndex(data => item.id === data.id);
         // console.log(idx);
         list[idx].has_wiki = !list[idx].has_wiki;
-        // setList([...list]);
+        setList([...list]);
         setChange(true)
     };
 
@@ -61,7 +69,7 @@ const SelectChannel = (props) => {
             setState();
         }else{
             list[idx].has_wiki = !list[idx].has_wiki;
-            // setList([...list]);
+            setList([...list]);
             setChange(true)
         }
     };
@@ -75,6 +83,9 @@ const SelectChannel = (props) => {
         // })();
         getGameListDispatch()
     }, []);
+    useEffect(() => {
+        setList([...gameList]);
+    },[gameList])
 
     // 拖拽后排序
     const handleDragEnd = ({active, over}) => {
@@ -91,7 +102,7 @@ const SelectChannel = (props) => {
     return (
         <>
             {modal()}
-            <Header change={change} />
+            <Header change={change} affirm={affirm}/>
             <Content data={TrueCheck} 
                 deleteList={deleteList} 
                 handleDragEnd={handleDragEnd} 
@@ -114,6 +125,9 @@ const mapDispatchToProps = (dispatch) => {
         getGameListDispatch(){
             dispatch(getGameList())
         },
+        affirmChangeGameDispatch(data){
+            dispatch(affirmChangeGame(data))
+        }
     }
 }
 
