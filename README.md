@@ -21,7 +21,7 @@
      - last_id: 未知          
     
 ### 文章互动数据：            
- - https://bbs-api.mihoyo.com/post/wapi/getDynamicData?gids=2&post_ids=${post_ids[].toString()}               
+ - https://bbs-api.mihoyo.com/post/wapi/getDynamicData?gids=2&post_ids=${post_ids[].join()}               
  - 请求方法:GET
  - 参数：            
      - gids：游戏分区id 从分区列表获取          
