@@ -6,7 +6,7 @@ import { Modal } from './style'
 import { arrayMove } from '@dnd-kit/sortable'
 import {
     getGameList,
-} from './store/actionCreators'
+} from '@/pages/Home/store/actionCreators'
 import {
     affirmChangeGame,
 } from '@/pages/Home/store/actionCreators'
@@ -116,7 +116,7 @@ const SelectChannel = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        gameList: state.select.gameList,
+        gameList: state.home.gameList,
     }
 }
 

@@ -21,6 +21,8 @@ import {
     FileWrongOutline,
 } from 'antd-mobile-icons'
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import LazyLoad from 'react-lazyload'
+import th from './th.gif'
 
 const SuggestPost = ({suggestPostList, carouselsList}) => {
 
@@ -215,7 +217,10 @@ const SuggestPostContent = ({Post}) => {
                     </span>
                 }
             </div>
-
+            
+            <LazyLoad 
+                placeholder={<img width="100%" 
+                height="100%" src={th} />}>
             <PhotoProvider>
             <div className="cover_container">
                 {
@@ -236,7 +241,7 @@ const SuggestPostContent = ({Post}) => {
                         ))
                 }
                 {
-                    Post.post.images && !Post.post.cover &&
+                    Post.post.images.length > 2 && !Post.post.cover &&
                     <div className="label">
                         <i className='iconfont icon-gengduotupian'></i>
                         +{Post.post.images.length}
@@ -244,7 +249,8 @@ const SuggestPostContent = ({Post}) => {
                 }
             </div>
             </PhotoProvider>
-                            
+            </LazyLoad>
+
             <div className="footer"></div>
         </ItemConent>
     )
