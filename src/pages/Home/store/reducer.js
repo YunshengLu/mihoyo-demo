@@ -22,16 +22,14 @@ export default (state = defaultState, action) => {
             }
         case actionTypes.AFFIRM_CHANGE_GAME:
             let changeList = state.gameList
-            console.log(changeList,'++++++++++++');
+            // console.log(changeList,'++++++++++++');
             changeList.map(item => {
                 action.data.map(actionitem => {
                     if(item.id == actionitem.id){
                         item.has_wiki = actionitem.has_wiki
                     }
                 })
-                // item.id == action.data
             })
-            // changeList = action.data
             return {
                 ...state,
                 gameList: changeList
