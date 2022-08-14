@@ -1,5 +1,18 @@
 # **本页面数据仅为学习所用**
+***ts + node 版见master 分支***         
 ## api(无需认证):  
+### 获取开屏广告
+ - URL: https://bbs-api.mihoyo.com/apihub/api/getAppSplash
+ - 请求方法:GET
+
+### 获取表情包
+ - URL: https://bbs-api.mihoyo.com/misc/api/emoticon_set
+ - 请求方法:GET
+
+### 获取分割线图片
+ - URL: https://bbs-api-static.mihoyo.com/apihub/api/staticResource?client_type=2
+ - 请求方法:GET
+
 ### 分区列表：  
  - https://bbs-api.mihoyo.com/apihub/api/getGameList  
  - 请求方法:GET
@@ -153,3 +166,7 @@
 - recommend_type：推荐类型，也不知道为啥恒为空
 - collection：专题数据
 - vod_list: ???,暂时获取的都为空
+
+
+
+
