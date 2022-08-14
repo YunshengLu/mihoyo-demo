@@ -28,12 +28,12 @@ const Discuss: React.FC<DiscussionProps> = props => {
 
     // 监听屏幕滚动，超出顶部，组件吸顶
     useEffect(() => {
-        if (scroll && scroll.top > 240) {
+        if (scroll && scroll.top > 190) {
             if (!searchHidden && searchRef.current) {
                 setSearchHidden(true);
                 searchRef.current.style.position = 'fixed';
                 searchRef.current.style.backgroundColor = 'white';
-                searchRef.current.style.marginTop = '-6.5rem';
+                searchRef.current.style.marginTop = '-4.8rem';
                 searchRef.current.style.zIndex = '99';
             }
         } else {
