@@ -11,6 +11,7 @@ import { connect } from 'react-redux'
 import { rootState } from '@/store'
 import { Dispatch } from 'redux'
 import { setChannelList } from '@/pages/Home/store/actions'
+import { ReducerState } from '@/store/reducers'
 
 interface SelectChannelProps {
     gameList: any[],
@@ -130,7 +131,7 @@ const SelectChannel: React.FC<SelectChannelProps> = (props) => {
     );
 }
 
-const mapStateToProps = (state: rootState) => {
+const mapStateToProps = (state: ReducerState) => {
     return {
         gameList: state.home.gameList,
         channelList: state.home.channelList,
