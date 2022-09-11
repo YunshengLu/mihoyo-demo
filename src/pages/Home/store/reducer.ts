@@ -1,6 +1,20 @@
 import { AnyAction } from 'redux';
 import * as actionTypes from './constants'
 
+export interface home {
+    gameList: Array<any>;
+    channelList:Array<any>;
+    recommendedPosts: Array<any>;
+    postIdStat:Array<any>;
+    navigator: Array<any>;
+    background: Array<any>;
+    discussion: Array<any>;
+    official: Array<any>;
+    carousels: Array<any>;
+    hotTopics:Array<any>;
+    loading: boolean;
+}
+
 const defaultState = {
     gameList: [],
     channelList:[],

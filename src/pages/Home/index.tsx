@@ -19,6 +19,7 @@ import { getRandomArrayElements } from '@/utils';
 import { useLocation, useNavigate } from 'react-router';
 import { InfiniteScroll } from 'antd-mobile';
 import { sleep } from 'antd-mobile/es/utils/sleep';
+import { ReducerState } from '@/store/reducers';
 
 interface HomeProps {
     loading: boolean;
@@ -156,7 +157,7 @@ const Home: React.FC<HomeProps> = props => {
     );
 };
 
-const mapStateToProps = (state: rootState) => ({
+const mapStateToProps = (state: ReducerState) => ({
     recommendedPosts: state.home.recommendedPosts,
     postIdStat: state.home.postIdStat,
     navigator: state.home.navigator,
