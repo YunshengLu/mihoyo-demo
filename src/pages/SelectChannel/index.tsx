@@ -131,7 +131,7 @@ const SelectChannel: React.FC<SelectChannelProps> = (props) => {
     );
 }
 
-const mapStateToProps = (state: ReducerState) => {
+const mapStateToProps = (state: rootState) => {
     return {
         gameList: state.home.gameList,
         channelList: state.home.channelList,

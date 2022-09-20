@@ -29,7 +29,8 @@ const defaultState = {
     loading: true,
 }
 
-export default (state = defaultState, action:AnyAction) => {
+// TODO 暂时用any，或者类型全部声明并给store根文件引入暴露给全局
+export default (state = defaultState, action:AnyAction):any => {
     switch (action.type) {
         case actionTypes.SET_GAMELIST:
             // console.log(action.data,'++++++++++');

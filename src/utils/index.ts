@@ -107,7 +107,7 @@ export const addSearchHistory = (value: string) => {
     window.localStorage.setItem('search_history', JSON.stringify([search_history, ...res]));
 };
 export const getSearchHistory = () => {
-    return JSON.parse(window.localStorage.getItem('search_history'));
+    return JSON.parse(window.localStorage.getItem('search_history') || '');
 };
 export const removeSearchHistory = () => {
     window.localStorage.removeItem('search_history');
@@ -121,7 +121,7 @@ export const removeSearchHistory = () => {
 
 export const debounce = (func: any, delay: number) => {
     let timer: string | number | NodeJS.Timeout | undefined;
-    return function (...args: any[]) {
+    return function (this:any,...args: any[]) {
         if (timer) {
             clearTimeout(timer);
         }

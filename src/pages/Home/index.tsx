@@ -157,7 +157,7 @@ const Home: React.FC<HomeProps> = props => {
     );
 };
 
-const mapStateToProps = (state: ReducerState) => ({
+const mapStateToProps = (state: rootState) => ({
     recommendedPosts: state.home.recommendedPosts,
     postIdStat: state.home.postIdStat,
     navigator: state.home.navigator,
@@ -172,10 +172,10 @@ const mapStateToProps = (state: ReducerState) => ({
 });
 const mapDispatchToProps = (dispatch: Dispatch) => ({
     loadRecommendedPostsDispatch(gids: number, page: number) {
-        dispatch(loadRecommendedPostsAction(gids, page));
+        dispatch<any>(loadRecommendedPostsAction(gids, page));
     },
     getHomeDataActionDispatch(gids: number, page: number) {
-        dispatch(getHomeDataAction(gids, page));
+        dispatch<any>(getHomeDataAction(gids, page));
     },
 });
 

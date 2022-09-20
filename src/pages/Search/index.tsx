@@ -233,17 +233,17 @@ const mapStateToProps = (state: rootState) => ({
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return {
     getHotwordDispatch() {
-      dispatch(getSearchHotwordAction());
+      dispatch<any>(getSearchHotwordAction());
     },
     getSuggestListDispatch(gids: number, keyword: string) {
-      dispatch(getSearchSuggestAction(gids, keyword))
+      dispatch<any>(getSearchSuggestAction(gids, keyword))
     },
     getSearchPostsDispatch(gids: number, keyword: string, last_id: number) {
       console.log(keyword);
-      dispatch(getSearchPostsAction(gids, keyword, last_id))
+      dispatch<any>(getSearchPostsAction(gids, keyword, last_id))
     },
     loadSearchPostsDispatch(gids: number, keyword: string, last_id: number) {
-      dispatch(loadSearchPostsAction(gids, keyword, last_id))
+      dispatch<any>(loadSearchPostsAction(gids, keyword, last_id))
     }
   }
 }
